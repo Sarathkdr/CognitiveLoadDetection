@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cognitive Load Detection System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>Cognitive Load Detection System</h1>
+            <p>Typing Patterns & Micro-Behavior Analysis</p>
+        </header>
+
+
+        <!-- Typing Test Section -->
+        <section class="test-box">
+
+            <h2>Typing Test</h2>
+
+            <p class="instructions">
+                Type the following paragraph naturally.
+                Your typing behavior will be analyzed.
+            </p>
+
+            <!-- Paragraph -->
+            <div class="paragraph" id="promptText">
+
+                Artificial intelligence is transforming the way
+                people interact with technology. Machine learning
+                helps computers analyze patterns and make predictions.
+                Technology continues to improve our daily lives.
+
+            </div>
+
+            <!-- Typing Area -->
+            <textarea
+                id="typingArea"
+                placeholder="Click Start Test and type here..."
+                disabled
+            ></textarea>
+
+
+            <!-- Buttons -->
+            <div class="buttons">
+
+                <button id="startBtn">
+                    Start Test
+                </button>
+
+                <button id="finishBtn" disabled>
+                    Finish Test
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Analytics Section -->
+        <section class="results">
+
+            <h2>Typing Analytics</h2>
+
+            <div class="stats">
+
+                <!-- Typing Speed -->
+                <div class="stat">
+
+                    <h3 id="speed">0</h3>
+
+                    <p>Typing Speed (WPM)</p>
+
+                </div>
+
+
+                <!-- Average Pause -->
+                <div class="stat">
+
+                    <h3 id="pause">0.00</h3>
+
+                    <p>Average Pause (Seconds)</p>
+
+                </div>
+
+
+                <!-- Backspace -->
+                <div class="stat">
+
+                    <h3 id="errors">0</h3>
+
+                    <p>Backspace Count</p>
+
+                </div>
+
+
+                <!-- Key Interval -->
+                <div class="stat">
+
+                    <h3 id="interval">0.00</h3>
+
+                    <p>Average Key Interval (Seconds)</p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Workload Selection -->
+            <div class="workload-section">
+
+                <h3>
+                    How mentally demanding did this task feel?
+                </h3>
+
+                <p>
+                    Select the workload level based on your experience.
+                </p>
+
+                <select id="cognitiveLoad">
+
+                    <option value="">
+                        Select Your Workload
+                    </option>
+
+                    <option value="Low">
+                        Low Cognitive Load
+                    </option>
+
+                    <option value="Medium">
+                        Medium Cognitive Load
+                    </option>
+
+                    <option value="High">
+                        High Cognitive Load
+                    </option>
+
+                </select>
+
+
+                <!-- Save Button -->
+                <button id="saveBtn" disabled>
+
+                    Save Session Data
+
+                </button>
+
+
+                <!-- Download Button -->
+                <button id="downloadBtn">
+
+                    Download Dataset CSV
+
+                </button>
+
+            </div>
+
+
+
+            <!-- Status -->
+            <p id="status" role="status">
+
+                Waiting to start...
+
+            </p>
+
+        </section>
+
+
+
+        <!-- Project Information -->
+        <section class="results">
+
+            <h2>About This Project</h2>
+
+            <p>
+                This system explores cognitive workload estimation
+                using typing behavior and micro-behavior analysis.
+                It collects typing speed, pause duration, backspace
+                count and keyboard intervals to build a machine
+                learning dataset.
+            </p>
+
+            <br>
+
+            <p>
+                Machine learning will be used in a later stage to
+                estimate Low, Medium and High workload categories.
+                These estimates are experimental and are not medical
+                or psychological diagnoses.
+            </p>
+
+        </section>
+
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

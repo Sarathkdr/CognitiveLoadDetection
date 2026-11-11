@@ -1,0 +1,11 @@
+
+typing_speed,average_pause,backspace_count,average_key_interval,duration_seconds,total_characters,cognitive_load
+65,0.2,2,0.15,30,120,Low
+60,0.3,1,0.18,35,130,Low
+70,0.2,2,0.14,28,125,Low
+42,0.8,5,0.35,60,150,Medium
+45,0.7,4,0.32,55,140,Medium
+38,0.9,6,0.4,65,160,Medium
+25,1.8,9,0.7,90,130,High
+20,2.1,12,0.9,110,145,High
+28,1.6,8,0.65,85,125,High

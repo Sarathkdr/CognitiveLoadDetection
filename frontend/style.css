@@ -1,0 +1,288 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f4f5ff;
+    color: #20243a;
+    min-height: 100vh;
+}
+
+/* Main Container */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 45px auto;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: #5546d8;
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+header p {
+    color: #777b91;
+    font-size: 15px;
+}
+
+/* Sections */
+
+.test-box,
+.results {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 30px rgba(40, 40, 100, 0.06);
+}
+
+h2 {
+    color: #292d45;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.instructions {
+    color: #777b91;
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+
+/* Typing Paragraph */
+
+.paragraph {
+    background: #f1efff;
+    border-left: 4px solid #6655e8;
+    padding: 22px;
+    line-height: 1.9;
+    border-radius: 10px;
+    margin-bottom: 22px;
+    color: #414366;
+    font-size: 15px;
+}
+
+/* Text Area */
+
+textarea {
+    width: 100%;
+    min-height: 160px;
+    padding: 18px;
+    border: 2px solid #e3e4ef;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    resize: vertical;
+    outline: none;
+    transition: 0.3s;
+}
+
+textarea:focus {
+    border-color: #6655e8;
+    box-shadow: 0 0 0 4px rgba(102, 85, 232, 0.08);
+}
+
+textarea:disabled {
+    background: #f8f8fb;
+    cursor: not-allowed;
+}
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 22px;
+}
+
+button {
+    padding: 13px 24px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #6655e8, #4938c7);
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    transition: 0.3s;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(85, 70, 216, 0.2);
+}
+
+button:disabled {
+    background: #b8b7c9;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Analytics Grid */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.stat {
+    background: #f6f5ff;
+    padding: 25px 12px;
+    text-align: center;
+    border-radius: 13px;
+    border: 1px solid #eeecff;
+    transition: 0.3s;
+}
+
+.stat:hover {
+    transform: translateY(-4px);
+}
+
+.stat h3 {
+    color: #5546d8;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.stat p {
+    font-size: 12px;
+    color: #777b91;
+    line-height: 1.5;
+}
+
+/* Workload Section */
+
+.workload-section {
+    margin-top: 30px;
+    padding: 25px;
+    background: #f8f7ff;
+    border: 1px solid #eeecff;
+    border-radius: 13px;
+}
+
+.workload-section h3 {
+    color: #292d45;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.workload-section p {
+    color: #777b91;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+/* Dropdown */
+
+.workload-section select {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 14px;
+    margin-bottom: 18px;
+    border: 1px solid #dfe0ec;
+    border-radius: 9px;
+    background: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+
+.workload-section select:focus {
+    border-color: #6655e8;
+}
+
+/* Status */
+
+#status {
+    margin-top: 22px;
+    padding: 14px;
+    background: #f1efff;
+    color: #5546d8;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* About Project */
+
+.results > p {
+    color: #70748a;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* Responsive Design */
+
+@media (max-width: 850px) {
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .test-box,
+    .results {
+        padding: 20px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .stat {
+        padding: 20px 8px;
+    }
+
+    .stat h3 {
+        font-size: 24px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons button,
+    .workload-section button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+}
